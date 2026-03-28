@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linden's App Launcher</title>
+</head>
+  <body>
+    
+    <input id="site" placeholder="Type a site (e.g. google)">
+
+      
+      <input id="appInput" placeholder="Type an app (e.g. messages)">
+  <button onclick="launch()">Open App</button>
+    
+        <script> 
+        function launch() {
+          app = document.getElementById("appInput").value
+          site = document.getElementById("site").value
+          window.open(`http://${app}.${site}.com/?source=app%20launcher%20js`, "_blank")
+          }
+        </script>
+  </body>
+</html>
