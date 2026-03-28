@@ -5,7 +5,10 @@
 </head>
   <body>
     
-    <input id="site" placeholder="Type a site (e.g. google)">
+    <input id="site" placeholder="Type a site (e.g. google.com)">
+
+    <input id="pages" placeholder="Type a site (e.g. /users/deltarune_lover_tori)">
+    
 
       
       <input id="appInput" placeholder="Type an app (e.g. messages)">
@@ -15,7 +18,9 @@
         function launch() {
           app = document.getElementById("appInput").value
           site = document.getElementById("site").value
-          window.open(`http://${app}.${site}/?source=app%20launcher%20js`, "_blank")
+          page = document.getElementById("appInput").value
+          if (prompt(` you are going to enter http://${app}.${site}/${page}. enter "continue" to continue`) == "continue") {
+          window.open(`http://${app}.${site}/${page}/?source=app%20launcher%20js`, "_blank")
           }
         </script>
   </body>
