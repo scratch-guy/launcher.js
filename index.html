@@ -18,7 +18,7 @@
         function launch() {
           app = document.getElementById("appInput").value
           site = document.getElementById("site").value
-          page = document.getElementById("appInput").value
+          page = document.getElementById("pages").value
           alert(`you are going to enter http://${app}.${site}/${page}. reload the page to stop. proceed to open link in new tab.`)
           window.open(`http://${app}.${site}/${page}/?source=app%20launcher%20js`, "_blank")
           }
